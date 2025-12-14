@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+
   <meta charset="UTF-8" />
   <title>Farmeze – Fresh From Farm</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +14,10 @@
 
 <!-- ================= HEADER ================= -->
 <header>
-  <div class="logo">Farmeze</div>
+  <div class="logo">
+  <img src="farmeze_logo_white_transparent (1).png" alt="Farmeze Logo">
+</div>
+
 
   <nav id="nav">
     <a href="#home" onclick="toggleMenu()">Home</a>
@@ -48,17 +54,16 @@
 <section class="about" id="about">
   <div class="about-content">
 
-    <h2 class="animate-item">About Us</h2>
+    <h2>About Us</h2>
 
-    <!-- FARMER IMAGE (ANIMATED) -->
+    <!-- FARMER IMAGE -->
     <img 
       src="https://images.unsplash.com/photo-1592982537447-6a9d89f81f55"
       alt="Farmer in field"
-      class="animate-item"
       style="max-width: 420px; width: 100%; border-radius: 18px; margin: 30px auto;"
     >
 
-    <p class="animate-item">
+    <p>
       Farmeze connects farmers directly to customers.
       We remove middlemen, empower farmers, and ensure
       fresh vegetables reach your home straight from the fields.
@@ -68,11 +73,11 @@
 
 <!-- ================= HOW WE WORK ================= -->
 <section class="work" id="work">
-  <h2 class="animate-item">How We Work</h2>
+  <h2>How We Work</h2>
 
   <div class="work-steps">
 
-    <div class="step animate-item">
+    <div class="step">
       <img 
         src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
         alt="Harvest"
@@ -82,7 +87,7 @@
       <p>Vegetables harvested fresh every morning from local farms.</p>
     </div>
 
-    <div class="step animate-item">
+    <div class="step">
       <img 
         src="https://images.unsplash.com/photo-1589927986089-35812386eec6"
         alt="Quality Check"
@@ -92,7 +97,7 @@
       <p>Every item is hand-checked for freshness and safety.</p>
     </div>
 
-    <div class="step animate-item">
+    <div class="step">
       <img 
         src="https://images.unsplash.com/photo-1604335399105-6c5c3bdf1c65"
         alt="Delivery"
@@ -107,12 +112,12 @@
 
 <!-- ================= TESTIMONIALS ================= -->
 <section class="testimonials" id="testimonials">
-  <h2 class="animate-item">What Customers Say</h2>
+  <h2>What Customers Say</h2>
 
   <div class="testimonial-cards">
-    <div class="card animate-item">“Best quality veggies I’ve ever ordered.” – Anjali</div>
-    <div class="card animate-item">“Feels good supporting farmers directly.” – Ramesh</div>
-    <div class="card animate-item">“Fresh, affordable and fast delivery.” – Suman</div>
+    <div class="card">“Best quality veggies I’ve ever ordered.” – Anjali</div>
+    <div class="card">“Feels good supporting farmers directly.” – Ramesh</div>
+    <div class="card">“Fresh, affordable and fast delivery.” – Suman</div>
   </div>
 </section>
 
@@ -134,21 +139,6 @@
 
 <!-- ================= JS ================= -->
 <script src="chatbot.js"></script>
-
-<!-- ================= SCROLL ANIMATION JS ================= -->
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll(".animate-item").forEach(el => {
-    observer.observe(el);
-  });
-</script>
 
 </body>
 </html>
