@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Farmeze – Fresh From Farm</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="logo">Farmeze</div>
+
+  <nav id="nav">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#work" onclick="toggleMenu()">How We Work</a>
+    <a href="#testimonials" onclick="toggleMenu()">Testimonials</a>
+    <a href="#footer" onclick="toggleMenu()">Contact</a>
+  </nav>
+
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <img src="IMG_4321.PNG" class="hero-logo" alt="Farmeze Logo">
+
+    <h1>
+      Fresh Vegetables<br>
+      Direct From Farmers
+    </h1>
+
+    <p>Healthy • Affordable • Delivered Fast</p>
+
+    <button class="cta-btn" onclick="openChat()">
+      🛒 Order Now
+    </button>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about" id="about">
+  <div class="about-content">
+
+    <h2 class="animate-item">About Us</h2>
+
+    <!-- FARMER IMAGE (ANIMATED) -->
+    <img 
+      src="https://images.unsplash.com/photo-1592982537447-6a9d89f81f55"
+      alt="Farmer in field"
+      class="animate-item"
+      style="max-width: 420px; width: 100%; border-radius: 18px; margin: 30px auto;"
+    >
+
+    <p class="animate-item">
+      Farmeze connects farmers directly to customers.
+      We remove middlemen, empower farmers, and ensure
+      fresh vegetables reach your home straight from the fields.
+    </p>
+  </div>
+</section>
+
+<!-- ================= HOW WE WORK ================= -->
+<section class="work" id="work">
+  <h2 class="animate-item">How We Work</h2>
+
+  <div class="work-steps">
+
+    <div class="step animate-item">
+      <img 
+        src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+        alt="Harvest"
+        style="width:100%; border-radius:12px; margin-bottom:12px;"
+      >
+      <h3>🌱 Farm Harvest</h3>
+      <p>Vegetables harvested fresh every morning from local farms.</p>
+    </div>
+
+    <div class="step animate-item">
+      <img 
+        src="https://images.unsplash.com/photo-1589927986089-35812386eec6"
+        alt="Quality Check"
+        style="width:100%; border-radius:12px; margin-bottom:12px;"
+      >
+      <h3>✅ Quality Check</h3>
+      <p>Every item is hand-checked for freshness and safety.</p>
+    </div>
+
+    <div class="step animate-item">
+      <img 
+        src="https://images.unsplash.com/photo-1604335399105-6c5c3bdf1c65"
+        alt="Delivery"
+        style="width:100%; border-radius:12px; margin-bottom:12px;"
+      >
+      <h3>🚚 Fast Delivery</h3>
+      <p>Farm-fresh vegetables delivered to your doorstep the same day.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials" id="testimonials">
+  <h2 class="animate-item">What Customers Say</h2>
+
+  <div class="testimonial-cards">
+    <div class="card animate-item">“Best quality veggies I’ve ever ordered.” – Anjali</div>
+    <div class="card animate-item">“Feels good supporting farmers directly.” – Ramesh</div>
+    <div class="card animate-item">“Fresh, affordable and fast delivery.” – Suman</div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="footer">
+  <p>© 2025 Farmeze. All Rights Reserved.</p>
+</footer>
+
+<!-- ================= CHATBOT ================= -->
+<div id="chatbot" class="chatbot hidden">
+  <div class="chat-header">
+    <strong>Farmeze Assistant 🌿</strong>
+    <button onclick="closeChat()">✖</button>
+  </div>
+
+  <div id="messages" class="messages"></div>
+  <div id="options" class="options"></div>
+</div>
+
+<!-- ================= JS ================= -->
+<script src="chatbot.js"></script>
+
+<!-- ================= SCROLL ANIMATION JS ================= -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".animate-item").forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
